@@ -23,10 +23,10 @@ const result = Math.sum(1.1, 2.22); // 3.32
 Include the bundled script and use `window.Matx`:
 
 ```html
-<script src="matx.js"></script>
-<script>
-  const total = Matx.sum(1.23, 4.56);
-</script>
+<script src="matx.js" type="module"></script>
+or
+await import("/path/matx.js");
+Math.acm(...)
 ```
 
 ## 🔧 Features
