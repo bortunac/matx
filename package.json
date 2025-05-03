@@ -1,0 +1,27 @@
+{
+  "name": "@bortunac/matx",
+  "version": "1.0.1",
+  "description": "Precision-safe math utilities and nested object access for JavaScript.",
+  "main": "matx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "math",
+    "precision",
+    "float",
+    "nested",
+    "utils",
+    "acm",
+    "object",
+    "pointer",
+    "sum",
+    "diff"
+  ],
+  "author": "Bortun Adrian <bortunadrian@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bortunac/matx.git"
+  }
+}

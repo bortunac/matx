@@ -1,0 +1,18 @@
+# .gitignore
+
+# Node.js modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# npm package logs
+npm-debug.log*
+
+# Environment files
+.env
+
+# Build files
+dist/
+build/
