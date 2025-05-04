@@ -174,15 +174,4 @@ console.log(acm);
 
 MIT
 
----
 
-## 🧠 Why Matx?
-
-* Zero-dependency
-* Precision-safe
-* Works with deeply nested objects
-* Friendly to financial, scientific, or statistical data models
-
-## 📄 License
-
-MIT
