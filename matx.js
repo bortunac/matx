@@ -160,7 +160,7 @@ Object.defineProperties(Math, {
         enumerable: false
     },
 
-    acm: {
+    acm: { // accumulate (add)
         value(acm, src, keys = []) {
             if (Array.isArray(src) && typeof src[0] === "object") {
                 src.forEach(item => Math.acm(acm, item, keys));
@@ -176,7 +176,7 @@ Object.defineProperties(Math, {
         enumerable: false
     },
 
-    acms: {
+    acms: { // accumulate substact
         value(acm, src, keys = []) {
             if (Array.isArray(src) && typeof src[0] === "object") {
                 src.forEach(item => Math.acms(acm, item, keys));
@@ -191,8 +191,34 @@ Object.defineProperties(Math, {
         },
         enumerable: false
     },
+     acmm: { // accumulate multiply
+        value: function (acm, src, keys = []) {
+            if (Array.isArray(src)) {
+                // Handle array of objects/arrays
+                if (typeof src[0] === "object" && src[0] !== null) {
+                    src.forEach((item) => Math.acmm(acm, item, keys));
+                    return acm;
+                }
+            }
 
-    acmd: {
+            const A = Array.isArray(keys)
+                ? keys
+                : keys === "*"
+                    ? Object.keys(src)
+                    : [keys];
+
+            A.forEach((key) => {
+                const current = acm.pointer(key) || 1;
+                const factor = src.pointer(key);
+                if (typeof factor === "number") {
+                    acm.pointer(key, current * factor);
+                }
+            });
+
+            return acm;
+        },
+
+    acmd: { // accumulate divide
         value(acm, src, keys = []) {
             if (Array.isArray(src) && typeof src[0] === "object") {
                 src.forEach(item => Math.acmd(acm, item, keys));
