@@ -1,6 +1,6 @@
 {
   "name": "@bortunac/matx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Precision-safe math utilities and nested object access for JavaScript.",
   "main": "matx.js",
   "scripts": {
